@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="{{root}}assets/css/app.css">
   </head>
 <body class="page__body">
-
-{{> header}}
-<main class="page__main">
-  {{> body}}
-</main>
-{{> footer}}
-
-<script src="{{root}}assets/js/app.js"></script>
+  <div class="page__wrapper">
+    {{> header}}
+    <main class="page__main">
+      {{> body}}
+    </main>
+    {{> footer}}
+  </div>
+  <script src="{{root}}assets/js/app.js"></script>
 </body>
 </html>

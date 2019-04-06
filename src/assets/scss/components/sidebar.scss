@@ -1,9 +1,119 @@
 .sidebar {
   position: absolute;
-  left: 0;
+  left: 55px;
   top: 90px;
 
-  &__nav {
-    
+  &__list  {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0 25px;
+
+    height: 568px;
+
+    border-left: 2px solid rgba($white, 0.15)
+  }
+
+  &__marker {
+    position: relative;
+    width: 4px;
+    height: 25px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: -3px;
+
+      width: 4px;
+      height: 4px;
+
+      border-radius: 50%;
+      background-color: rgba($white, 0.3);
+
+      transform: translateY(-50%);
+    }
+  }
+
+  &__link {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    height: 25px;
+    padding-left: 10px;
+
+    font-size: 14px;
+    font-weight: 300;
+    color: $white;
+
+    color: transparent;
+
+    transition: $global-transition;
+
+    &:hover {
+      &::before {
+        background-color: $button-blue;
+      }
+
+      .sidebar__num {
+        color: $white;
+      }
+    }
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: -3px;
+
+      width: 4px;
+      height: 4px;
+
+      border-radius: 50%;
+      background-color: $white;
+
+      transform: translateY(-50%);
+      transition: $global-transition;
+    }
+
+    &_active {
+      color: $white;
+
+      &::before {
+        left: -3px;
+
+        background-color: $button-blue;
+      }
+
+      .sidebar__num {
+        right: 100%;
+        left: auto;
+
+        color: $white;
+      }
+    }
+  }
+
+  &__num {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+
+    display: flex;
+    align-items: center;
+    height: 25px;
+    padding-right: 11px;
+
+    // color: $white;
+    color: rgba($white, 0.3);
+    // opacity: 0.3;
+
+    transform: translateY(-50%);
+    transition: $global-transition;
   }
 }

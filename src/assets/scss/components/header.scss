@@ -2,7 +2,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,6 +64,8 @@
     width: 19px;
     height: 14px;
     padding: 0;
+
+    cursor: pointer;
 
     &::before {
       content: "";

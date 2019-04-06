@@ -1,0 +1,16 @@
+<section class="about">
+  <div class="about__wrapper">
+    <h2 class="about__title">We<br> believe in passionate people</h2>
+    <button class="about__button">Career</button>
+    <ul class="about__list">
+      {{# each about}}
+        <li class="about__item">
+          <a href="{{link}}" class="about__link">
+            <img class="about__picture" src="assets/img/{{img}}" width="169" height="92" alt="{{title}}">
+            <span class="about__link-title">{{title}}</span>
+          </a>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>

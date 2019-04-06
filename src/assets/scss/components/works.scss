@@ -44,6 +44,28 @@
       .works__card {
         width: 100%;
       }
+
+      .works__picture {
+        margin-bottom: 23px;
+      }
+
+      .works__caption-title {
+        margin-bottom: 13px;
+
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.9px;
+
+        opacity: 1;
+      }
+
+      .works__description {
+        padding: 0 40px;
+
+        font-size: 16px;
+
+        opacity: 1;
+      }
     }
 
     &_next {
@@ -57,13 +79,83 @@
 
   &__card {
     margin: 0;
+
+    transition: $global-transition;
   }
 
   &__picture {
     width: 100%;
+    margin-bottom: 7px;
+
+    border-radius: 50%;
   }
 
-  &__picture {
+  &__caption-title {
+    display: block;
+    margin-bottom: 10px;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    text-align: center;
+
+    opacity: 0.5;
+  }
+
+  &__description {
+    margin: 0;
+    padding: 0 5px;
+
+    font-size: 10px;
+    text-align: center;
+
+    opacity: 0;
+
+    transition: $global-transition;
+  }
+
+  &__button {
+    position: absolute;
+    top: 139px;
+    z-index: 10;
+
+    width: 54px;
+    height: 54px;
+    padding: 0;
+
     border-radius: 50%;
+    background-color: $button-gray;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 18px;
+      height: 15px;
+
+      background-image: url('../img/arrow-right.svg');
+      background-repeat: no-repeat;
+    }
+
+    &_prev {
+      left: 10px;
+
+      &::before {
+        transform: translate(-50%, -50%) rotate(180deg);
+      }
+    }
+
+    &_next {
+      right: 10px;
+
+      &::before {
+        transform: translate(-50%, -50%);
+      }
+    }
   }
 }

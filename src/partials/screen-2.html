@@ -1,0 +1,20 @@
+<section class="works">
+  <div class="works__wrapper">
+    <h2 class="works__title">Selected work</h2>
+    <div class="works__list-wrapper swiper-container" id="works-slider">
+      <ul class="works__list swiper-wrapper">
+        {{# each works}}
+          <li class="works__item swiper-slide">
+            <figure class="works__card">
+              <img class="works__picture" src="assets/img/{{img}}" alt="{{title}}">
+              <figcaption class="work__caption">
+                <b class="works__caption-title">{{title}}</b>
+                <p class="works__description">{{text}}</p>
+              </figcaption>
+            </figure>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</section>

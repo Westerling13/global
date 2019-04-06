@@ -3,6 +3,7 @@
 // Подключаем scss файлы из node_modules
 
 @import 'normalize/import-now';
+@import 'swiper';
 
 // Файлы для вёрстки
 
@@ -15,3 +16,4 @@
 @import 'components/footer';
 @import 'components/sidebar';
 @import 'components/home';
+@import 'components/works';

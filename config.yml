@@ -24,6 +24,7 @@ PATHS:
   # Пути для Sass библиотек, который могут быть загружены с помощью @import
   sass:
     - "node_modules/normalize-scss/sass"
+    - "node_modules/swiper/src"
   # Путь для JavaScript, где начинает работать Webpack, чтобы собирать модули
   entries:
     - "src/assets/js/app.js"

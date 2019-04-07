@@ -1,0 +1,28 @@
+<section class="request page__screen" id="request">
+  <div class="request__wrapper">
+    <h2 class="request__title">You want us to do</h2>
+    <form class="request__form" method="post">
+      <div class="request__form-wrapper">
+        {{# each request}}
+          <div class="request__checkbox-wrapper">
+            <label class="request__checkbox-container">
+              <input class="request__checkbox" type="checkbox" name="{{title}}">
+              <span class="request__checkbox-indicator"></span>
+              <span class="request__checkbox-background"></span>
+              <span class="request__checkbox-caption">{{title}}</span>
+            </label>
+          </div>
+        {{/each}}
+      </div>
+      <label class="request__input-wrapper">
+        <input type="text" class="request__input" name="name" placeholder="Name" required>
+        <span class="request__label">Name</span>
+      </label>
+      <label class="request__input-wrapper">
+        <input type="email" class="request__input" name="email" placeholder="Email" required>
+        <span class="request__label">Email</span>
+      </label>
+      <button class="request__button" type="submit">Send request</button>
+    </form>
+  </div>
+</section>

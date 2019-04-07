@@ -1,5 +1,6 @@
 import Swiper from 'swiper';
 
+// Инициализация слайдера на втором экране
 const slider = new Swiper('#works-slider', {
   slidesPerView: 3,
   centeredSlides: true,

@@ -80,7 +80,7 @@ function sass() {
     autoprefixer({ browsers: COMPATIBILITY }),
 
     // UnCSS - для удаления не используемых стилей в CSS, только если production
-    PRODUCTION && uncss.postcssPlugin(UNCSS_OPTIONS),
+    // PRODUCTION && uncss.postcssPlugin(UNCSS_OPTIONS),
   ].filter(Boolean);
 
   return gulp.src('src/assets/scss/app.scss')
@@ -90,7 +90,7 @@ function sass() {
     })
       .on('error', $.sass.logError))
     .pipe($.postcss(postCssPlugins))
-    .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
+    .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie11' })))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/assets/css'))
     .pipe(browser.reload({ stream: true }));

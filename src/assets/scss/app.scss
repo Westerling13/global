@@ -4,6 +4,7 @@
 
 @import 'normalize/import-now';
 @import 'swiper';
+@import 'animate.scss';
 
 // Файлы для вёрстки
 
@@ -18,3 +19,5 @@
 @import 'components/home';
 @import 'components/works';
 @import 'components/about';
+@import 'components/nav';
+@import 'components/request';

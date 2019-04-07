@@ -55,15 +55,15 @@
 
     transition: $global-transition;
 
-    &:hover {
-      &::before {
-        background-color: $button-blue;
-      }
-
-      .sidebar__num {
-        color: $white;
-      }
-    }
+    // &:hover {
+    //   &::before {
+    //     background-color: $button-blue;
+    //   }
+    //
+    //   .sidebar__num {
+    //     color: $white;
+    //   }
+    // }
 
     &::before {
       content: "";
@@ -82,6 +82,21 @@
       transition: $global-transition;
     }
 
+    &:focus,
+    &:hover {
+      color: $white;
+
+      &::before {
+        left: -3px;
+      }
+
+      .sidebar__num {
+        left: -25px;
+
+        color: $white;
+      }
+    }
+
     &_active {
       color: $white;
 
@@ -92,8 +107,7 @@
       }
 
       .sidebar__num {
-        right: 100%;
-        left: auto;
+        left: -25px;
 
         color: $white;
       }
@@ -110,9 +124,7 @@
     height: 25px;
     padding-right: 11px;
 
-    // color: $white;
     color: rgba($white, 0.3);
-    // opacity: 0.3;
 
     transform: translateY(-50%);
     transition: $global-transition;

@@ -1,0 +1,40 @@
+.nav {
+  font-family: $proxima;
+  font-size: 55px;
+  line-height: 1.1;
+  font-weight: 900;
+  letter-spacing: 1.4px;
+  text-align: right;
+
+  &__item:not(:last-child) {
+    margin-bottom: 14px;
+  }
+
+  &__link {
+    position: relative;
+
+    color: $white;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 60%;
+      left: 50%;
+
+      display: none;
+      width: calc(100% + 12px);
+      height: 14px;
+
+      background-color: $button-blue;
+
+      transform: translate(-50%, -50%);
+    }
+
+    &_active {
+      &::before {
+        display: block;
+      }
+    }
+  }
+}

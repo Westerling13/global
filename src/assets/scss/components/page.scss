@@ -3,6 +3,7 @@
   &__body {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
 
     font-family: $proxima;
@@ -12,15 +13,59 @@
     color: $white;
 
     background-color: $bg-black;
+    perspective: none;
+
+    transform-origin: 0% 50%;
+    transition: perspective 500ms;
+
+    &_open-nav {
+      perspective: 500px;
+
+      .page__wrapper {
+        outline: 30px solid #0f33ff;
+
+        transform: translateZ(-700px) translateX(-40%) rotateY(20deg);
+        transition: transform 500ms ease-out;
+      }
+
+      .page__nav {
+        z-index: 1000;
+
+        opacity: 1;
+        transition: all 500ms ease-out;
+      }
+    }
   }
 
   &__wrapper {
     position: relative;
+    top: -10%;
 
     max-width: $desktop-width;
     width: 100%;
-    height: 100%;
+    height: 720px;
 
+    transform: translateZ(0) translateX(0) rotateY(0deg);
+  }
 
+  &__nav {
+    position: absolute;
+    top: 21%;
+    right: 572px;
+    z-index: -100;
+
+    opacity: 0;
+  }
+
+  &__screen {
+    z-index: -100;
+    opacity: 0;
+
+    transition: opacity 300ms ease-out;
+
+    &_active {
+      z-index: 90;
+      opacity: 1;
+    }
   }
 }

@@ -1,0 +1,35 @@
+-
+  title: 'Home'
+  link: '#home'
+  active: true
+  num: '01'
+  key: 0
+  markers: true
+-
+  title: 'Works'
+  link: '#works'
+  active: false
+  num: '02'
+  key: 1
+  markers: true
+-
+  title: 'About'
+  link: '#about'
+  active: false
+  num: '03'
+  key: 2
+  markers: true
+-
+  title: 'Contact'
+  link: '#about'
+  active: false
+  num: '04'
+  key: 3
+  markers: true
+-
+  title: 'Hire us'
+  link: '#request'
+  active: false
+  num: '05'
+  key: 4
+  markers: false

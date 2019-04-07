@@ -1,0 +1,10 @@
+<section class="nav page__nav page__nav_active">
+  <h2 class="visually-hidden">Main Navigation</h2>
+  <ul class="nav__list">
+    {{# each nav}}
+      <li class="nav__item">
+        <a href="{{link}}" class="nav__link{{# if active}} nav__link_active{{/if}}" data-key="{{key}}">{{title}}</a>
+      </li>
+    {{/each}}
+  </ul>
+</section>

@@ -1,4 +1,4 @@
 import $ from 'jquery';
 import './components/works';
-
-window.jQuery = $;
+import './components/sections';
+import './components/nav';

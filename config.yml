@@ -4,7 +4,7 @@ PORT: 8000
 # Настройки Autoprefixer, для кроссбраузерности
 COMPATIBILITY:
   - "last 2 versions"
-  - "ie >= 9"
+  - "ie >= 11"
   - "ios >= 7"
 
 # Настройки для UnCSS
@@ -25,6 +25,7 @@ PATHS:
   sass:
     - "node_modules/normalize-scss/sass"
     - "node_modules/swiper/src"
+    - "node_modules/animatewithsass"
   # Путь для JavaScript, где начинает работать Webpack, чтобы собирать модули
   entries:
     - "src/assets/js/app.js"
